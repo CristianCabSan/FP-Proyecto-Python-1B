@@ -1,22 +1,21 @@
 ## Carpeta src
 
 * **/src**: Contiene los diferentes módulos de Python que conforman el proyecto.
-  * **\<modulo1.py\>**: Describe aquí el módulo principal.
-  * **\<modulo1_test.py\>**: Describe aquí el módulo de pruebas.
-  * **\<modulo2.py\>**: Añade descripciones para el resto de módulos que pueda tener tu proyecto. Por ejemplo, sería conveniente tener un módulo separado con funciones genéricas para dibujar gráficas y/o otro con funciones genéricas de conversión de tipos. 
-* **/data**: Contiene el dataset o datasets del proyecto
-    * **\<dataset1.csv\>**: Añade una descripción genérica del dataset.
-    * **\<dataset2.csv\>**: Añade una descripción del resto de datasets que puedas tener.
+  <disney.py>: Módulo principal del proyecto [...]
+  <disney_test.py>: Módulo para la prueba de funciones [...]
+
+* **/data**: Contiene el dataset del proyecto
+    <disney.csv>: Fichero sobre peliculas disney, con 6 columnas distintas (movie_title,release_date,genre,mpaa_rating,total_gross,inflation_adjusted_gross).
     
-## Estructura del *dataset*
+## Estructura del fichero
 
-Aquí debes describir la estructura del dataset explicando qué representan los datos que contiene y la descripción de cada una de las columnas.
-
-El dataset está compuesto por \<N\> columnas, con la siguiente descripción:
-
-* **\<columna 1>**: de tipo \<tipo\>, representa....
-* **\<columna 2>**: de tipo \<tipo\>, representa....
-....
+El dataset está compuesto por 6 columnas, con la siguiente descripción:
+<movie_title>: de tipo <str>, titulo de la pelicula
+<release_date>: de tipo <str>, fecha de estreno
+<genre>: de tipo <str>, género
+<mpaa_rating>: de tipo <str>, clasificación por edades
+<total_gross>: de tipo <int>, dinero total generado con la pelicula
+<inflation_adjusted_gross>: de tipo <int>, dinero total generado con la pelicula ajustado a la inflacion
 
 ## Tipos implementados
 

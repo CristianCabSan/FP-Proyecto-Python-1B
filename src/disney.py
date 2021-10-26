@@ -1,13 +1,13 @@
 import csv
-# namedTuple("Disney","movie_title,release_date,genre,mpaa_rating,total_gross,inflation_adjusted_gross")
 
-disney = []
-with open(disney.csv, encoding="!utf-8") as f:
-    for linea in f:
-        movie_title, release_date, genre, mpaa_rating, total_gross, inflation_adjusted_gross = linea.split(",")
-        
-        total_gross = int(total_gross)
-        inflation_adjusted_gross = int(inflation_adjusted_gross)
+with open(".\data\disney.csv", encoding="!utf-8") as f:
+    disney = []
+    next(f)
+    for disney in f:
 
-        disney.append((movie_title, release_date, genre, mpaa_rating, total_gross, inflation_adjusted_gross))
+        #movie_title, release_date, genre, mpaa_rating, total_gross, inflation_adjusted_gross = disney.split(",")
+        #total_gross = int(total_gross)
+       # inflation_adjusted_gross = int(inflation_adjusted_gross)
+        print(disney)
+       # disney.append((movie_title, release_date, genre, mpaa_rating, total_gross, inflation_adjusted_gross))
 print(disney)

@@ -20,12 +20,12 @@ Disclaimer: A la hora de la realizacion de esta versión el proyecto se encuentr
 
 El dataset está compuesto por 6 columnas para cada pelicula, con la siguiente descripción:
 
-* <movie_title>: de tipo <str>, Titulo de la pelicula
-* <release_date>: de tipo <str>, Fecha de estreno
-* <genre>: de tipo <str>, Género de la pelicula
-* <mpaa_rating>: de tipo <str>, Clasificación por edades
-* <total_gross>: de tipo <int>, Dinero total generado con la pelicula
-* <inflation_adjusted_gross>: de tipo <int>, Dinero total generado con la pelicula ajustado a la inflacion
+* movie_title: de tipo <str>, Titulo de la pelicula
+* release_date: de tipo <str>, Fecha de estreno
+* genre: de tipo <str>, Género de la pelicula
+* mpaa_rating: de tipo <str>, Clasificación por edades
+* total_gross: de tipo <int>, Dinero total generado con la pelicula
+* inflation_adjusted_gross: de tipo <int>, Dinero total generado con la pelicula ajustado a la inflacion
 
 ## Tipos implementados
 

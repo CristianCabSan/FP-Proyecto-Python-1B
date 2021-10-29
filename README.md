@@ -1,3 +1,5 @@
+# Proyecto del Primer Cuatrimestre Fundamentos de Programación (Curso  21/22)
+
 Autor: Cristian Caballero Sánchez
 
 Este proyecto se realiza a manera de trabajo entregable para la clase de FP de primer año de Ingenieria Informatica de Computadores.
@@ -8,28 +10,27 @@ Disclaimer: A la hora de la realizacion de esta versión el proyecto se encuentr
 ## Carpeta src
 
 * **/src**: Contiene los diferentes módulos de Python que conforman el proyecto.
-  <disney.py>: Módulo principal del proyecto
-  <disney_test.py>: Módulo para la prueba de funciones
+  * <disney.py>: Módulo principal del proyecto
+  * <disney_test.py>: Módulo para la prueba de funciones
 
 * **/data**: Contiene el dataset del proyecto
-    <disney.csv>: Fichero con información sobre las peliculas de Disney.
+  * <disney.csv>: Fichero con información sobre las peliculas de Disney.
     
 ## Estructura del fichero
 
 El dataset está compuesto por 6 columnas para cada pelicula, con la siguiente descripción:
 
-<movie_title>: de tipo <str>, Titulo de la pelicula
-<release_date>: de tipo <str>, Fecha de estreno
-<genre>: de tipo <str>, Género
-<mpaa_rating>: de tipo <str>, Clasificación por edades
-<total_gross>: de tipo <int>, Dinero total generado con la pelicula
-<inflation_adjusted_gross>: de tipo <int>, Dinero total generado con la pelicula ajustado a la inflacion
+* <movie_title>: de tipo <str>, Titulo de la pelicula
+* <release_date>: de tipo <str>, Fecha de estreno
+* <genre>: de tipo <str>, Género
+* <mpaa_rating>: de tipo <str>, Clasificación por edades
+* <total_gross>: de tipo <int>, Dinero total generado con la pelicula
+* <inflation_adjusted_gross>: de tipo <int>, Dinero total generado con la pelicula ajustado a la inflacion
 
 ## Tipos implementados
 
-"Info": Esta tupla contiene la forma del fichero y es usado en la funcion "leer_fichero"
+* "Info": Esta tupla contiene la forma del fichero y es usado en la funcion "leer_fichero"
 ## Funciones implementadas
-Añade aquí descripciones genéricas de las funciones, que luego debes acompañar con comentarios de tipo documentación en el código
 
 ### \<modulo Disney\>
 

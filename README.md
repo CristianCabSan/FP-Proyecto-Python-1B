@@ -35,14 +35,14 @@ El dataset está compuesto por 6 columnas para cada pelicula, con la siguiente d
 ### \<modulo Disney\>
 
 * **<lee_fichero(fichero)>**: Lee los datos del fichero y devuelve una lista de tuplas con los datos del fichero.
--Entrada: Fichero en formato csv y codificacion utf-8>
--Salida: Lista de tuplas (movie_title, release_date, genre, mpaa_rating, total_gross, inflation_adjusted_gross)>
+***Entrada: Fichero en formato csv y codificacion utf-8>
+***Salida: Lista de tuplas (movie_title, release_date, genre, mpaa_rating, total_gross, inflation_adjusted_gross)>
 * **<dinero_generado(k)>**: Devuelve una lista con todas las peliculas cuyos beneficios ajustados a la inflacion son mayores que una cantidad dada
 Entrada:k(int): Dinero (en millones de dolares) generado por la pelicula minimos para entrar en la lista, el valor predeterminado es de 1 billón (mil millones) de dolares
 Salida: Lista con las peliculas con un inflation_adjusted_gross mayor a k
 * **<generos()>**: Muestra todos los generos de las peliculas lanzadas por Disney
 Salida: Un conjunto con los diferentes generos de las peliculas
-* **<dinero_por_genero(genero)>**: Devuelve el promedio del dinero generado(ajustado a inflación) de las peliculas de un mismo genero
+* **<dinero_por_genero(genero)>**: Devuelve el promedio del dinero generado(ajustado a inflación) de las peliculas de un mismo generoc
 Entrada:
 -genero(str): Debe coincidir con uno de los generos del fichero,
 como valor predeterminado tiene 0 lo que hace este proceso con todos los generos

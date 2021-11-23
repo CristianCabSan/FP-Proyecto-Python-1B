@@ -35,10 +35,6 @@ El dataset está compuesto por 6 columnas para cada pelicula, con la siguiente d
 ### \<modulo Disney\>
 
 * **<lee_fichero(fichero)>**: Lee los datos del fichero y devuelve una lista de tuplas con los datos del fichero.
-<<<<<<< HEAD
- * <Entrada>: Fichero en formato csv y codificacion utf-8
- * <Salida>: Lista de tuplas (movie_title, release_date, genre, mpaa_rating, total_gross, inflation_adjusted_gross)
-=======
  * <Entrada>: Fichero en formato csv y codificacion utf-8
  * <Salida>: Lista de tuplas (movie_title, release_date, genre, mpaa_rating, total_gross, inflation_adjusted_gross)
 >>>>>>> 9b52aa2206b6f2cee9a4b4ab5d887fd1be430e37

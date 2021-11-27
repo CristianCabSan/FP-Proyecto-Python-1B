@@ -32,7 +32,7 @@ El dataset está compuesto por 6 columnas para cada pelicula, con la siguiente d
 * "Info": Esta tupla contiene la forma del fichero y es usado en la funcion "leer_fichero"
 ## Funciones implementadas
 
-### \modulo Disney\
+### modulo Disney
 
 * **<lee_fichero(fichero)>**: Lee los datos del fichero y devuelve una lista de tuplas con los datos del fichero.
  * **<Entrada>**: Fichero en formato csv y codificacion utf-8

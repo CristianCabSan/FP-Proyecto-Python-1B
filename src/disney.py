@@ -82,4 +82,4 @@ def tiempo_desde_lanzamiento(pelicula):
     f = [(p.release_date) for p in lista if p.movie_title == pelicula]
     return timedelta((datetime.now()-f[0]).days)
 
-print(tiempo_desde_lanzamiento("Snow White and the Seven Dwarfs"))
+print(type(tiempo_desde_lanzamiento("Snow White and the Seven Dwarfs")))

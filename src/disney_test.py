@@ -9,9 +9,8 @@ def test_lee_fichero(fichero):
 
 
 def test_dinero_generado(k=1000):
-    lista = lee_fichero(".\data\disney.csv")
     print("Las peliculas que han generado mas de", k ," millones de dolares son:")
-    print(*dinero_generado(lista,k), sep="\n")
+    print(*dinero_generado(k), sep="\n")
 
 def test_generos():
     lista = lee_fichero(".\data\disney.csv")

@@ -1,7 +1,7 @@
 import csv
 from collections import namedtuple
 from datetime import datetime
-from datetime import timedelta
+
 
 Info = namedtuple("Info","movie_title, release_date, genre, mpaa_rating, total_gross, inflation_adjusted_gross")
 
@@ -26,9 +26,20 @@ def lee_fichero(fichero):
             datos.append(tupla)
     return(datos)
 
+
 info_disney = lee_fichero(".\data\disney.csv")
 
+
 def dinero_generado(k=1000):
+    """
+    Esta funcion recibe un valor k como entrada y devuelve una lista cuyos inflation_adjusted_gross
+    son mayores a k
+
+    Entrada:
+    -k(int): Valor en miles de dolares y con valor predeterminado 1000
+    Salida:
+    -Lista con las peliculas que cumplen el requisito
+    """
     peliculas = lee_fichero(".\data\disney.csv")
     k = k*1000000
     lista = [(p.movie_title, p.inflation_adjusted_gross) for p in peliculas if p.inflation_adjusted_gross > k]
@@ -37,7 +48,9 @@ def dinero_generado(k=1000):
 
 
 def generos():
-
+    """
+    Devuelve una lista todos los generos de peliculas lanzadas por Disney (Las disponibles en el fichero)
+    """
     peliculas = lee_fichero(".\data\disney.csv")
     listag = {(p.genre) for p in peliculas}
     return listag
@@ -45,7 +58,7 @@ def generos():
 
 def dinero_por_genero(genero=0):
     """
-    Muestra el promedio del dinero generado(ajustado a inflación) de las peliculas de un mismo genero
+    Devuelve el promedio del dinero generado(ajustado a inflación) de las peliculas de un mismo genero
     
     Entrada:
     -genero(str): Debe coincidir con uno de los generos del fichero,
@@ -69,17 +82,34 @@ def dinero_por_genero(genero=0):
         lista = [(p.inflation_adjusted_gross) for p in peliculas if p.genre == genero]
         return round(sum(lista)/len(lista),2)
 
-def tiempo_desde_lanzamiento(pelicula):
-    """
-    Muestra el tiempo en dias desde el lanzamiento de una pelicula indicada hasta el momento de ejecuccion
+def clasificaciones():
+    peliculas = lee_fichero(".\data\disney.csv")
+    clasificaciones = {(p.mpaa_rating) for p in peliculas}
+    return clasificaciones
 
+
+def porcentaje_clasificacion(clasificacion=None):
+    """
+    Devuelve el porcentaje de peliculas con una determinada clasificacion
+    
     Entrada:
-    -pelicula(str)
+    -clasificacion(str): Debe coincidir con una de las clasificaciones del fichero,
+    como valor predeterminado tiene None lo que hace este proceso con todos los generos
     Salida:
-    -datetime.timedelta con la diferencia de tiempo en dias
+    Hay dos opciones de salida,
+    -si clasificacion = None, Se devuelve una lista con los porcentajes de las distintas clasificaciones
+    -si clasificacion coincide con alguno de las clasificaciones del fichero, Devuelve un float con el porcentaje de peliculas con esa clasificacion
     """
-    lista = lee_fichero(".\data\disney.csv")
-    f = [(p.release_date) for p in lista if p.movie_title == pelicula]
-    return timedelta((datetime.now()-f[0]).days)
-
-print(type(tiempo_desde_lanzamiento("Snow White and the Seven Dwarfs")))
+    
+    peliculas = lee_fichero(".\data\disney.csv")
+    leidos = len(peliculas)
+    clasif = list(clasificaciones())
+    if clasificacion == None:
+        porcentaje = []
+        for e in clasif:
+            numero = len([(p.mpaa_rating) for p in peliculas if p.mpaa_rating == e])
+            porcentaje.append(round((numero/leidos)*100 , 2))
+    elif clasificacion in clasif:
+        numero = len([(p.mpaa_rating) for p in peliculas if p.mpaa_rating == clasificacion])
+        porcentaje = round((numero/leidos)*100, 2)
+    return porcentaje

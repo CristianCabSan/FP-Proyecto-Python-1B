@@ -39,7 +39,9 @@ El dataset está compuesto por 6 columnas para cada pelicula, con la siguiente d
 * **generos()**: Muestra todos los generos de las peliculas lanzadas por Disney (disponibles en el fichero)
 * **dinero_por_genero(genero)**: Devuelve el promedio del dinero generado(ajustado a inflación) de las peliculas de un genero, en caso de no indicarse genero se calcula el promedio
 de todos los generos (por lo que en este caso devuelve una lista de valores)
-* **tiempo_desde_lanzamiento**: Dada una pelicula devuelve un datetime.timedelta con la cantidad de tiempo en dias desde que se estreno la pelicula
+* **clasificaciones**: Devuelve un conjunto con las distintas clasificaciones (Creado para porcentaje_clasificacion)
+* **porcentaje_clasificacion**: Dada una clasificacion devuelve el porcentaje de peliculas con esa clasificacion, si no se determina una clasificacion se devuelve una lista con los
+porcentajes de las distintas clasificaciones. (El fichero posee 513 peliculas)
 
 ### Modulo Disney_test
 En este modulo se han definido las seguientes funciones, cada uno en referencia a una funcion del modulo "Disney" teniendo el mismo nombre
@@ -48,5 +50,5 @@ que las del modulo mencionado pero con el prefijo "test_".
 * **test_dinero_generado()**
 * **test_generos()**
 * **test_dinero_por_genero(genero)**
-* **test_tiempo_desde_lanzamiento**
+* **test_porcentaje_clasificacion**
  

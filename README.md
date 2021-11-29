@@ -47,8 +47,8 @@ porcentajes de las distintas clasificaciones. (El fichero posee 513 peliculas)
 En este modulo se han definido las seguientes funciones, cada uno en referencia a una funcion del modulo "Disney" teniendo el mismo nombre
 que las del modulo mencionado pero con el prefijo "test_".
 * **test_lee_fichero(fichero)**
-* **test_dinero_generado()**
+* **test_dinero_generado(k)**
 * **test_generos()**
 * **test_dinero_por_genero(genero)**
-* **test_porcentaje_clasificacion**
+* **test_porcentaje_clasificacion(clasificacion)**
  

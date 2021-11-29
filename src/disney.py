@@ -56,7 +56,7 @@ def generos():
     return listag
 
 
-def dinero_por_genero(genero=0):
+def dinero_por_genero(genero=None):
     """
     Devuelve el promedio del dinero generado(ajustado a inflación) de las peliculas de un mismo genero
     
@@ -71,7 +71,7 @@ def dinero_por_genero(genero=0):
     
     
     peliculas = lee_fichero(".\data\disney.csv")
-    if genero == 0:
+    if genero == None:
         listag = list(generos())
         lista = []
         for g in listag:

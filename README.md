@@ -6,7 +6,7 @@ Este proyecto se realiza a manera de trabajo entregable para la clase de FP de p
 Para este proyecto se ha escogido un dataset referente a peliculas de disney, el cual contiene informacion especifica de cada pelicula
 incluyendo datos como la fecha de salida o los ingresos generados con ellas.
 
-## Carpeta src
+## Estructura de las carpetas
 
 * **/src**: Contiene los diferentes módulos de Python que conforman el proyecto.
   * <disney.py>: Módulo principal del proyecto

@@ -34,16 +34,15 @@ El dataset está compuesto por 6 columnas para cada pelicula, con la siguiente d
 
 ### Modulo Disney
 #### Entrega 2
-##### Bloque 1
-* **lee_fichero(fichero)** Dado un fichero devuelve una lista de tuplas categorizando las distintas columnas del fichero.
-##### Bloque 2
-* **dinero_generado(k)**: Dado k (en miles de dolares y con valor predeterminado 1000) devuelve una lista de tuplas de las peliculas que han generado mas que k (A partir del valor ajustado a inflacion) donde cada tupla contiene el nombre y el dinero generado de dichas peliculas.
-* **generos()**: Muestra todos los generos de las peliculas lanzadas por Disney (disponibles en el fichero)
-##### Bloque 3
-* **dinero_por_genero(genero)**: Devuelve el promedio del dinero generado(ajustado a inflación) de las peliculas de un genero, en caso de no indicarse genero se calcula el promedio
-de todos los generos (por lo que en este caso devuelve una lista de valores)
-* **porcentaje_clasificacion**: Dada una clasificacion devuelve el porcentaje de peliculas con esa clasificacion, si no se determina una clasificacion se devuelve una lista con los porcentajes que representan las distintas clasificaciones. (El fichero posee 513 peliculas)
-* **clasificaciones**: Devuelve un conjunto con las distintas clasificaciones (Funcion auxiliar creada para porcentaje_clasificacion)
+* **Bloque 1**
+  * **lee_fichero(fichero)** Dado un fichero devuelve una lista de tuplas categorizando las distintas columnas del fichero.
+* **Bloque 2**
+  * **dinero_generado(k)**: Dado k (en miles de dolares y con valor predeterminado 1000) devuelve una lista de tuplas de las peliculas que han generado mas que k (A partir del valor ajustado a inflacion) donde cada tupla contiene el nombre y el dinero generado de dichas peliculas.
+  * **generos()**: Muestra todos los generos de las peliculas lanzadas por Disney (disponibles en el fichero)
+* **Bloque 3**
+  * **dinero_por_genero(genero)**: Devuelve el promedio del dinero generado(ajustado a inflación) de las peliculas de un genero, en caso de no indicarse genero se calcula el promedio de todos los generos (por lo que en este caso devuelve una lista de valores)
+  * **porcentaje_clasificacion**: Dada una clasificacion devuelve el porcentaje de peliculas con esa clasificacion, si no se determina una clasificacion se devuelve una lista con los porcentajes que representan las distintas clasificaciones. (El fichero posee 513 peliculas)
+  * **clasificaciones**: Devuelve un conjunto con las distintas clasificaciones (Funcion auxiliar creada para porcentaje_clasificacion)
 
 ### Modulo Disney_test
 En este modulo se han definido las seguientes funciones, cada uno en referencia a una funcion del modulo "Disney" teniendo el mismo nombre

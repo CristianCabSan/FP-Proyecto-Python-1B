@@ -165,6 +165,7 @@ def mayor_peliculas_anyo(registros,anyo,n,orden=True):
         return sorted(lista, key=lambda x:x[1])[:n]
 
 # --------------------------------Bloque 6-------------------------------------
+
 def diccionario_anyos(registros):
     """
     (Obtener un diccionario que permita agrupar, los registros que cumplen determinada condición, por algún
@@ -183,7 +184,7 @@ def diccionario_anyos(registros):
             u = {p.release_date.year:dicc[p.release_date.year].append(p.movie_title)}
     return dicc
 
-def intervalo_ingresos(registros):
+def intervalo_ingresos(registros,n=3):
     """
     (Obtener un diccionario que permita agrupar, los registros que cumplen determinada condición, por algún
     campo (clave) y que haga corresponder a cada clave una lista, con los “n” registros, ordenados de mayor a   
@@ -191,7 +192,8 @@ def intervalo_ingresos(registros):
 
     Devuelve un diccionario cuyas claves son intervalos de dolares generados (menos de 1 millon, de 1 a 10 millones, de 11 a 50 millones, de 51 a 100 millones, de 101 a 1000 millones
     y mas de 1000 millones) y cuyos valores son una lista de tuplas de las peliculas que corresponden a cada intervalo en el que la lista contiene el nombre de la pelicula y el dinero
-    generado por esta. Ademas los valores estan ordenador de mayor a menor segun la cantidad de dinero generada
+    generado por esta. Ademas los valores estan ordenados de mayor a menor segun la cantidad de dinero generado. El valor n con una valor por defecto de 3 determinara la longitud maxima de
+    cada lista de tuplas.
     """
     dicc = dict()
     menos1 = [] ; de1a10 = [] ; de11a50 = [] ; de51a100 = [] ;de101a1000 = [] ; mas1000 = []
@@ -199,26 +201,26 @@ def intervalo_ingresos(registros):
         #------------------------------------------------------------------------------------------------------------
         if p.inflation_adjusted_gross < 1000000:
             menos1.append((p.movie_title, p.inflation_adjusted_gross))
-            dicc["Menos de 1 millon"] = sorted(menos1, key=lambda x:x[1], reverse=True)
+            dicc["Menos de 1 millon"] = sorted(menos1[:n], key=lambda x:x[1], reverse=True)
         #------------------------------------------------------------------------------------------------------------
         elif p.inflation_adjusted_gross < 11000000:
             de1a10.append((p.movie_title, p.inflation_adjusted_gross))
-            dicc["Entre 1 y 10 millones"] = sorted(de1a10, key=lambda x:x[1], reverse=True)
+            dicc["Entre 1 y 10 millones"] = sorted(de1a10[:n], key=lambda x:x[1], reverse=True)
         #------------------------------------------------------------------------------------------------------------
         elif p.inflation_adjusted_gross < 51000000:
             de11a50.append((p.movie_title, p.inflation_adjusted_gross))
-            dicc["Entre 11 y 50 millones"] = sorted(de11a50, key=lambda x:x[1], reverse=True)
+            dicc["Entre 11 y 50 millones"] = sorted(de11a50[:n], key=lambda x:x[1], reverse=True)
         #------------------------------------------------------------------------------------------------------------
         elif p.inflation_adjusted_gross < 101000000:
             de51a100.append((p.movie_title, p.inflation_adjusted_gross))
-            dicc["Entre 51 y 100 millones"] = sorted(de51a100, key=lambda x:x[1], reverse=True)
+            dicc["Entre 51 y 100 millones"] = sorted(de51a100[:n], key=lambda x:x[1], reverse=True)
         #------------------------------------------------------------------------------------------------------------
         elif p.inflation_adjusted_gross < 1000000000:
             de101a1000.append((p.movie_title, p.inflation_adjusted_gross))
-            dicc["Entre 101 y 1000 millones"] = sorted(de101a1000, key=lambda x:x[1], reverse=True)
+            dicc["Entre 101 y 1000 millones"] = sorted(de101a1000[:n], key=lambda x:x[1], reverse=True)
         #------------------------------------------------------------------------------------------------------------
         elif p.inflation_adjusted_gross > 1000000000:
             mas1000.append((p.movie_title, p.inflation_adjusted_gross))
-            dicc["Mas de 1000 millones"] = sorted(mas1000, key=lambda x:x[1], reverse=True)
+            dicc["Mas de 1000 millones"] = sorted(mas1000[:n], key=lambda x:x[1], reverse=True)
         #------------------------------------------------------------------------------------------------------------
     return dicc

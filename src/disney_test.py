@@ -52,6 +52,7 @@ def test_diccionario_anyos(registros, anyo):
 def test_intervalo_ingresos(registros, intervalo="Menos de 1 millon"):
     print(f"Las peliculas que han generado {intervalo} de dolares y sus respectivos ingresos son {intervalo_ingresos(registros)[intervalo]}")
 
+
 print("Lee fichero")
 test_lee_fichero(".\data\disney.csv")
 print("----------")

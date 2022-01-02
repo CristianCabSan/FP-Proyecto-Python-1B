@@ -171,7 +171,7 @@ def diccionario_anyos(registros):
     (Obtener un diccionario que permita agrupar, los registros que cumplen determinada condición, por algún
     campo (clave). A cada clave se le hará corresponder una lista con los registros que contienen esa clave)
 
-    Devuelve un diccionario donde cada key es un anyo y su valor es una lista con los titulos de las peliculas estrenadas
+    Devuelve un diccionario donde cada clave es un anyo y su valor es una lista con los titulos de las peliculas estrenadas
     en ese anyo
     """
 

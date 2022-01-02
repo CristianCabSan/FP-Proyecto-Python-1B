@@ -46,7 +46,7 @@ def test_mayor_pelicula_genero(registros,genero,orden=True):
     else:
         print (f"La pelicula con menor ingresos del genero {genero} es {pelicula[0]} con un ingreso de {pelicula[1]} dolares")
 
-def test_diccionario_anyos(registros, anyo):
+def test_diccionario_anyos(registros,anyo):
     print(f"Las peliculas estrenadas en el anyo {anyo} por Disney fueron {diccionario_anyos(registros)[anyo]}")
 
 def test_intervalo_ingresos(registros, intervalo="Menos de 1 millon"):

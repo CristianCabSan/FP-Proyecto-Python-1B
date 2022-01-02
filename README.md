@@ -57,10 +57,10 @@ con los siguientes tipos:
 #### Entrega 3
 
 * **Bloque 4**
-  * **mayor_pelicula_genero(registros,genero,orden=True)** Dado un genero y con un orden por defecto de True, devuelve la pelicula con mayor ingresos del genero dado en caso de que orden sea False devolvera la pelicula con menor ingresos del genero dado.
+  * **mayor_pelicula_genero(registros,genero,orden)** Dado un genero y con un orden por defecto de True, devuelve la pelicula con mayor ingresos del genero dado en caso de que orden sea False devolvera la pelicula con menor ingresos del genero dado.
 
 * **Bloque 5**
-  * **mayor_peliculas_anyo(registros,anyo,n,orden=True)** Devuelve una lista con nombre e ingresos (ajustados a inflacion) de las n peliculas con mayor/menor ingresos de un anyo determinado
+  * **mayor_peliculas_anyo(registros,anyo,n,orden)** Devuelve una lista con nombre e ingresos (ajustados a inflacion) de las n peliculas con mayor/menor ingresos de un anyo determinado
 
 * **Bloque 6**
   * **diccionario_anyos(registros)** Devuelve un diccionario cuyas claves son los diferentes anyos del fichero y sus respectivos valores son listas que contienen los nombres de las peliculas estrenadas ese anyo
@@ -74,5 +74,6 @@ En este modulo se han definido las seguientes funciones, cada una en referencia 
 * **test_dinero_por_genero(registros,genero)**
 * **test_porcentaje_clasificacion(registros,clasificacion)**
 * **test_mayor_pelicula_genero(registros,genero,orden)**
+* **mayor_peliculas_anyo(registros,anyo,n,orden)**
 * **test_diccionario_anyos(registros,anyo)**
 * **test_intervalo_ingresos(registros, intervalo)**

@@ -60,7 +60,7 @@ con los siguientes tipos:
   * **mayor_pelicula_genero(registros,genero,orden=True)** Dado un genero y con un orden por defecto de True, devuelve la pelicula con mayor ingresos del genero dado en caso de que orden sea False devolvera la pelicula con menor ingresos del genero dado.
 
 * **Bloque 5**
- * **mayor_peliculas_anyo(registros,anyo,n,orden=True)** Devuelve una lista con nombre e ingresos (ajustados a inflacion) de las n peliculas con mayor/menor ingresos de un anyo determinado
+  * **mayor_peliculas_anyo(registros,anyo,n,orden=True)** Devuelve una lista con nombre e ingresos (ajustados a inflacion) de las n peliculas con mayor/menor ingresos de un anyo determinado
 
 * **Bloque 6**
   * **diccionario_anyos(registros)** Devuelve un diccionario cuyas claves son los diferentes anyos del fichero y sus respectivos valores son listas que contienen los nombres de las peliculas estrenadas ese anyo

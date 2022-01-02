@@ -28,7 +28,7 @@ El dataset está compuesto por 6 columnas para cada pelicula, con la siguiente d
 
 ## Tipos implementados
 
-* "Info": Esta tupla contiene la forma del fichero y es usado en la funcion "leer_fichero" tiene la siguiente estructura:
+"Info": Esta tupla contiene la forma del fichero y es usado en la funcion "leer_fichero" tiene la siguiente estructura:
 
 `Info = namedtuple("Info","movie_title, release_date, genre, mpaa_rating, total_gross, inflation_adjusted_gross")`
 

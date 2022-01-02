@@ -52,7 +52,7 @@ con los siguientes tipos:
 * **Bloque 3**
   * **dinero_por_genero(registros, genero)** Devuelve el promedio del dinero generado(ajustado a inflación) de las peliculas de un genero, en caso de no indicarse genero se calcula el promedio de todos los generos (por lo que en este caso devuelve una lista de valores)
   * **porcentaje_clasificacion(registros, clasificacion)** Dada una clasificacion devuelve el porcentaje de peliculas con esa clasificacion, si no se determina una clasificacion se devuelve una lista con los porcentajes que representan las distintas clasificaciones. (El fichero posee 513 peliculas)
-  * **clasificaciones(registros)**: Devuelve un conjunto con las distintas clasificaciones (Funcion auxiliar creada para porcentaje_clasificacion)
+    * **clasificaciones(registros)**: Devuelve un conjunto con las distintas clasificaciones (Funcion auxiliar creada para porcentaje_clasificacion)
 
 #### Entrega 3
 

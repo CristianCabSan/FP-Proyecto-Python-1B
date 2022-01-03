@@ -64,7 +64,7 @@ con los siguientes tipos:
 
 * **Bloque 6**
   * **diccionario_anyos(registros)** Devuelve un diccionario cuyas claves son los diferentes anyos del fichero y sus respectivos valores son listas que contienen los nombres de las peliculas estrenadas ese anyo
-  * **intervalo_ingresos(registros)** Devuelve un diccionario cuyas claves son intervalos de dolares generados y cuyos valores son una lista de tuplas de las peliculas que corresponden a cada intervalo en el que la lista contiene el nombre de la pelicula y el dinero generado por esta. Ademas los valores estan ordenados de mayor a menor segun la cantidad de dinero generado. El valor n con una valor por defecto de 3 determinara la longitud maxima de cada lista de tuplas.
+  * **intervalo_ingresos(registros,n)** Devuelve un diccionario cuyas claves son intervalos de dolares generados y cuyos valores son una lista de tuplas de las peliculas que corresponden a cada intervalo en el que la lista contiene el nombre de la pelicula y el dinero generado por esta. Ademas los valores estan ordenados de mayor a menor segun la cantidad de dinero generado. El valor n con una valor por defecto de 3 determinara la longitud maxima de cada lista de tuplas.
 
 ### Modulo Disney_test
 En este modulo se han definido las seguientes funciones, cada una en referencia a una funcion del modulo **disney.py** teniendo el mismo nombre que las del modulo mencionado pero con el prefijo `test_`
@@ -76,4 +76,4 @@ En este modulo se han definido las seguientes funciones, cada una en referencia 
 * **test_mayor_pelicula_genero(registros,genero,orden)**
 * **mayor_peliculas_anyo(registros,anyo,n,orden)**
 * **test_diccionario_anyos(registros,anyo)**
-* **test_intervalo_ingresos(registros, intervalo)**
+* **test_intervalo_ingresos(registros, intervalo,n)**

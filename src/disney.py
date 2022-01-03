@@ -177,11 +177,10 @@ def diccionario_anyos(registros):
 
     dicc = dict()
     for p in registros:
-        if p.release_date.year not in dicc:
-            u = {p.release_date.year:[p.movie_title]}
-            dicc.update(u)
+        if p.release_date.year in dicc:
+            dicc[p.release_date.year] += [p.movie_title]
         else:
-            u = {p.release_date.year:dicc[p.release_date.year].append(p.movie_title)}
+            dicc[p.release_date.year] = [p.movie_title]
     return dicc
 
 def intervalo_ingresos(registros,n=3):

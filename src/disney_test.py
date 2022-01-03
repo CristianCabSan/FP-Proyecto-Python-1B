@@ -49,8 +49,8 @@ def test_mayor_pelicula_genero(registros,genero,orden=True):
 def test_diccionario_anyos(registros,anyo):
     print(f"Las peliculas estrenadas en el anyo {anyo} por Disney fueron {diccionario_anyos(registros)[anyo]}")
 
-def test_intervalo_ingresos(registros, intervalo="Menos de 1 millon"):
-    print(f"Las peliculas que han generado {intervalo} de dolares y sus respectivos ingresos son {intervalo_ingresos(registros)[intervalo]}")
+def test_intervalo_ingresos(registros, intervalo="Menos de 1 millon",n=5):
+    print(f"Las {n} peliculas que han generado {intervalo} de dolares y sus respectivos ingresos son {intervalo_ingresos(registros)[intervalo]}")
 
 
 print("Lee fichero")
